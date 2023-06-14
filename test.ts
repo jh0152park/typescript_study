@@ -9,8 +9,8 @@ class Dict {
   }
 
   add(word: Word) {
-    if (this.words[word.term] === undefined) {
-      this.words[word.term] = word.def;
+    if (this.words[word.food] === undefined) {
+      this.words[word.food] = word.comment;
     }
   }
 
@@ -20,7 +20,7 @@ class Dict {
 }
 
 class Word {
-  constructor(public term: string, public def: string) {}
+  constructor(public food: string, public comment: string) {}
 }
 
 const kimchi = new Word("kimchi", "food of korea");

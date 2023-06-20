@@ -1,30 +1,16 @@
-type Words = {
-  [key: string]: string;
-};
+abstract class User {
+  constructor(protected firstName: string, protected lastName: string) {}
 
-class Dict {
-  private words: Words;
-  constructor() {
-    this.words = {};
-  }
-
-  add(word: Word) {
-    if (this.words[word.food] === undefined) {
-      this.words[word.food] = word.comment;
-    }
-  }
-
-  def(term: string) {
-    return this.words[term];
-  }
+  abstract sayHi(name: string): string;
+  abstract fullName(): string;
 }
 
-class Word {
-  constructor(public readonly food: string, public readonly comment: string) {}
+class Player extends User {
+  fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  sayHi(name: string): string {
+    return `Hello ${name}! ${this.firstName} ${this.lastName}`;
+  }
 }
-
-const kimchi = new Word("kimchi", "food of korea");
-const dict = new Dict();
-
-dict.add(kimchi);
-dict.def("kimchi");

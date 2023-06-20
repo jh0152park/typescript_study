@@ -1,0 +1,14 @@
+{
+  "name": "typescript_study",
+  "version": "1.0.0",
+  "description": "typescript_study",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}

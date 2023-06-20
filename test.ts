@@ -20,7 +20,7 @@ class Dict {
 }
 
 class Word {
-  constructor(public food: string, public comment: string) {}
+  constructor(public readonly food: string, public readonly comment: string) {}
 }
 
 const kimchi = new Word("kimchi", "food of korea");
